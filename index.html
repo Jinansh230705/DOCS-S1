@@ -6,53 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Study Documents</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1em;
-        }
-
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        section {
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            color: #333;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        a {
-            text-decoration: none;
-            color: #3498db;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
+        /* Your styling here */
     </style>
 </head>
 
@@ -62,28 +16,61 @@
         <h1>Your Study Documents</h1>
     </header>
 
-    <main>
-        <section>
-            <h2>Subject 1</h2>
-            <ul>
-                <li><a href="#">Document 1</a></li>
-                <li><a href="#">Document 2</a></li>
-                <!-- Add more documents as needed -->
-            </ul>
-        </section>
-
-        <section>
-            <h2>Subject 2</h2>
-            <ul>
-                <li><a href="#">Document 1</a></li>
-                <li><a href="#">Document 2</a></li>
-                <!-- Add more documents as needed -->
-            </ul>
-        </section>
-
-        <!-- Add more sections for additional subjects -->
+    <main id="studyDocuments">
 
     </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const main = document.getElementById('studyDocuments');
+
+            // Define your folder structure here
+            const folders = [
+                { name: 'EEE', contents: ['Document1.pdf', 'Document2.txt', { name: 'Subfolder1', contents: ['Subdoc1.txt', 'Subdoc2.pdf'] }] },
+                { name: 'CTSD', contents: ['Document3.pdf', 'Document4.txt'] },
+                { name: 'Maths', contents: ['Document5.pdf', 'Document6.txt'] },
+                { name: 'OSS', contents: ['Document7.pdf', 'Document8.txt'] },
+                { name: 'CS', contents: ['Document9.pdf', 'Document10.txt'] }
+            ];
+
+            // Function to create a list item for a file or folder
+            function createListItem(item) {
+                const listItem = document.createElement('li');
+                listItem.textContent = item.name;
+
+                if (Array.isArray(item.contents)) {
+                    const sublist = document.createElement('ul');
+                    item.contents.forEach(subItem => {
+                        sublist.appendChild(createListItem(subItem));
+                    });
+                    listItem.appendChild(sublist);
+                }
+
+                return listItem;
+            }
+
+            // Function to create a section for a folder
+            function createFolderSection(folder) {
+                const section = document.createElement('section');
+                const heading = document.createElement('h2');
+                heading.textContent = folder.name;
+                section.appendChild(heading);
+
+                const list = document.createElement('ul');
+                folder.contents.forEach(item => {
+                    list.appendChild(createListItem(item));
+                });
+                section.appendChild(list);
+
+                return section;
+            }
+
+            // Generate the webpage
+            folders.forEach(folder => {
+                main.appendChild(createFolderSection(folder));
+            });
+        });
+    </script>
 
 </body>
 
