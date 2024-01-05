@@ -1,89 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Documents</title>
+    <title>Documents Hub</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            font-family: 'Inter', sans-serif;
+            margin: 20px;
             background-color: #f4f4f4;
         }
 
-        header {
-            background-color: #333;
-            color: white;
+        h1 {
             text-align: center;
-            padding: 1em;
-        }
-
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        section {
-            margin-bottom: 20px;
-        }
-
-        h2 {
             color: #333;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
+        .document-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
         }
 
-        li {
+        .document-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .document-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .document-link {
+            display: block;
             margin-bottom: 10px;
-        }
-
-        a {
             text-decoration: none;
-            color: #3498db;
+            color: #007BFF;
+            font-weight: 700;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .document-link:hover {
+            color: #0056b3;
         }
     </style>
 </head>
-
 <body>
+    <h1>Documents Hub</h1>
 
-    <header>
-        <h1>Study Documents</h1>
-    </header>
+    <div class="document-container">
 
-    <main>
-        <section>
-            <h2>EEE</h2>
-            <ul>
-                <li><a href="https://drive.google.com/drive/folders/1LJIWFZulXw2lRH9qzzCl1N74atBniM6k?usp=drive_link">EEE Folder</a></li>
-              
-            </ul>
-        </section>
+        <div class="document-card">
+            <h1>Electrical and Electronic Engineering</h1>
+            <a href="https://drive.google.com/drive/folders/1LJIWFZulXw2lRH9qzzCl1N74atBniM6k?usp=drive_link" class="document-link" target="_blank">EEE Drive Link</a>
+        </div>
 
-        <section>
-            <h2>Subject 2</h2>
-            <ul>
-                <li><a href="#">Document 1</a></li>
-                <li><a href="#">Document 2</a></li>
-                <!-- Add more documents as needed -->
-            </ul>
-        </section>
+        <div class="document-card">
+            <h1>Computational Thinking and Structure Design</h1>
+            <a href="https://classroom.google.com/c/NjI1MDIyODc5Njcx/p/NjI1MDIzMzczMjU3/details" class="document-link" target="_blank">CTSD Classroom Link</a>
+        </div>
 
-        <!-- Add more sections for additional subjects -->
+        <div class="document-card">
+            <h1>Open Source Software</h1>
+            <a href="OSS/ch1.pdf" class="document-link" target="_blank">CH-1</a>
+            <a href="OSS/ch2.pdf" class="document-link" target="_blank">Ch-2</a>
+            <a href="OSS/ch3.pdf" class="document-link" target="_blank">CH-3</a>
+            <a href="OSS/ch4.pdf" class="document-link" target="_blank">Ch-4</a>
+            <a href="OSS/ch5.pdf" class="document-link" target="_blank">Ch-5</a>
+        </div>
 
-    </main>
+        <div class="document-card">
+            <h1>Mathematics-1</h1>
+            <a href="Maths/ch1.pdf" class="document-link" target="_blank">CH-1</a>
+            <a href="Maths/ch2.pdf" class="document-link" target="_blank">Ch-2</a>
+            <a href="Maths/ch3.pdf" class="document-link" target="_blank">CH-3</a>
+            <a href="Maths/ch4.pdf" class="document-link" target="_blank">Ch-4</a>
+            <a href="Maths/ch5.pdf" class="document-link" target="_blank">Ch-5</a>
+            <a href="Maths/ch6.pdf" class="document-link" target="_blank">Ch-6</a>
+        </div>
+
+        <!-- Add more document cards as needed -->
+
+    </div>
 
 </body>
-
 </html>
