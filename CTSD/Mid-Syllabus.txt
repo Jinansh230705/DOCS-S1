@@ -1,0 +1,39 @@
+                               UNIT-1
+Introduction to C language :
+
+i.) History of C language
+ii.) Program Development Steps
+iii.) Structure of C program
+----------------------------------------------------------------------------------------------
+                               UNIT-2
+Data Types, User I/O and OperatorsData Types: 
+
+i.) Primitive , Extended and Derived Data types,
+Variables User I/O: 
+i.) Formatted,predefined Functions of stdio.h header file Operators:
+ii.) Types of operators, Precedence, Associativity
+----------------------------------------------------------------------------------------------
+                               UNIT-3
+Conditional Flow Statements, Iterative Statements, Jumping Statements and Pointors:
+
+Conditional Flow Statements: 
+i.) Simple if,
+ii.)if-else,
+iii.) else-if ladder,
+iv.)switch case Decision Making using conditional statements
+
+Iterative Statements: 
+i.) Control Entry and Control Exit Loops 
+
+Jumping Statements:
+i.)break
+ii.)continue
+iii.)forward and backward goto. 
+
+Pointers: 
+i.)Typed:single double,
+ii.)triple..wild
+iii.)NULL
+iv.)Const 
+v.)untyped:void
+----------------------------------------------------------------------------------------------
